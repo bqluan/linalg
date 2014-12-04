@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>解三元线性方程组的解</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/static/css/linalg.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">线性方程组</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="1d.html">一元方程</a></li>
+            <li><a href="2d.html">二元方程组</a></li>
+            <li class="active"><a href="3d.html">三元方程组</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>求三元线性方程组的解</h1>
+        <p>三元线性方程组有三个未知数<var>x</var>、<var>y</var>和<var>z</var>，给定三个方程，求<var>x</var>、<var>y</var>和<var>z</var>的解。现在就点击<var>?</var>设置未知数的系数，来看一下计算机给出的解是否正确。</p>
+      </div>
+      <div class="linalg">
+        <p>1 <var>x</var> + 3 <var>y</var> + 5 <var>z</var> = 10</p>
+        <p>2 <var>x</var> + 5 <var>y</var> + <var>z</var> = 8</p>
+        <p>2 <var>x</var> + 3 <var>y</var> + 8 <var>z</var> = 3</p>
+      </div><!-- /.linalg -->
+      <div class="alert alert-success solution" role="alert">
+        <p><var>x</var> = -9.28</p>
+        <p><var>y</var> = 5.16</p>
+        <p><var>z</var> = 0.76</p>
+      </div>
+    </div><!-- /.container -->
+    <script src="/static/js/jquery-2.1.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>
