@@ -3,8 +3,6 @@ import json
 import logging
 import numpy
 
-# logging.basicConfig(filename='logs/all.log', format='%(asctime)s - %(message)s', level=logging.DEBUG)
-
 app = Flask(__name__)
 
 @app.route('/')
