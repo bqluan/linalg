@@ -63,6 +63,38 @@ $(function() {
       })
   }
 
+  function solve_3d(factors) {
+    var A = [[factors[0], factors[1], factors[2]], [factors[4], factors[5], factors[6]], [factors[8], factors[9], factors[10]]]
+    var b = [[factors[3]], [factors[7]], [factors[11]]]
+    $.get('/solution?linalg=' + JSON.stringify({"A": A, "b": b}))
+     .done(function(data) {
+        var $solution = $('.solution')
+        var solution = JSON.parse(data)
+        var vars = ['x', 'y', 'z']
+        $solution.empty()
+        for (var i = 0; i < solution.length; i++) {
+          $solution.append('<p><var>' + vars[i] + '</var> = ' + solution[i][0] + '</p>')
+        }
+        $solution.show()
+        $solution.removeClass('animated rubberBand').addClass('animated rubberBand').one(
+          'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $(this).removeClass('animated rubberBand')
+          }
+        )
+      })
+     .fail(function() {
+        var $solution = $('.solution')
+        $solution.empty()
+        $solution.append('<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>&nbsp;这个题太难了我不会')
+        $solution.show()
+        $solution.removeClass('animated rubberBand').addClass('animated rubberBand').one(
+          'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $(this).removeClass('animated rubberBand')
+          }
+        )
+      })
+  }
+
   function solve_if_all_factors_are_given() {
     var factors = []
     var all_factors_are_given = true
@@ -80,7 +112,7 @@ $(function() {
       } else if (factors.length === 6) {
         solve_2d(factors)
       } else if (factors.length === 12) {
-        console.log('solving 3d')
+        solve_3d(factors)
       }
     }
   }
