@@ -7,6 +7,7 @@
     <title>解一元线性方程的解</title>
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/static/css/animate.min.css" rel="stylesheet">
     <link href="/static/css/linalg.css" rel="stylesheet">
   </head>
   <body>
@@ -36,11 +37,24 @@
         <p>一元线性方程有一个未知数<var>x</var>，给定一个方程，求<var>x</var>的解。现在就点击<var>?</var>设置未知数的系数，来看一下计算机给出的解是否正确。</p>
       </div>
       <div class="linalg">
-        15 <var>x</var> = 30
+        <div class="factor" data-toggle="tooltip" data-placement="top" title="点击输入系数，例如：-2">
+          <span>?</span>
+          <input type="text" value="?">
+        </div>
+        <var>x</var>
+        <var>=</var>
+        <div class="factor" data-toggle="tooltip" data-placement="top" title="点击输入系数，例如：4">
+          <span>?</span>
+          <input type="text" value="?">
+        </div>
       </div><!-- /.linalg -->
-      <div class="alert alert-success solution" role="alert"><var>x</var> = 2</div>
+      <hr>
+      <div class="solution">
+        <p><var>x</var> = -4</p>
+      </div>
     </div><!-- /.container -->
     <script src="/static/js/jquery-2.1.1.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/linalg.js"></script>
   </body>
 </html>

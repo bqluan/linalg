@@ -6,5 +6,48 @@
 
 .solution {
   text-align: center;
-  font-size: 21px;
+  font-size: 40px;
+  display: none;
+}
+
+.solution > .glyphicon {
+  font-size: 30px;
+}
+
+.factor {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #337ab7;
+}
+
+.factor > span {
+  display: inline-block;
+  padding: 0 5px;
+  min-width: 20px;
+}
+
+.factor > span:focus,
+.factor > span:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.factor > input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2px;
+  left: 2px;
+  border: 0;
+  padding: 0 3px;
+  display: none;
+}
+
+.factor.editing > input {
+  display: block;
+}
+
+.factor > input:focus {
+  outline: 0;
 }
